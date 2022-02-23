@@ -239,13 +239,10 @@ def check_winner(board=global_board):# todo: use it to check whether one side wo
     return winner
 
 def available_move(board = global_board):
-    #count = -1
     available_list = []
     for count, position in enumerate(board):
-        #count += 1
         if position == " ":
             available_list.append(count)
-    #count = 0
     return available_list
 
 def board_full(board = global_board):
