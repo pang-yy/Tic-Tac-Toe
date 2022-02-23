@@ -21,7 +21,7 @@ Enter 1-2: ")
             multiplayer()
         else:
             print("'1' OR '2' Only!")
-    except Exception:
+    except ValueError:
         print("Enter Number Only!")
 
 def multiplayer(game_end=global_game_end, board=global_board):
@@ -67,7 +67,7 @@ def multiplayer(game_end=global_game_end, board=global_board):
                             else:
                                 print("Not In Range")
                                 print("="*50)
-                        except:
+                        except ValueError:
                             print("Enter Number Only!")
                 else:
                     print("Already Occupied")
@@ -78,7 +78,7 @@ def multiplayer(game_end=global_game_end, board=global_board):
             #display_board()
             if not(check_winner()):
                 game_end = board_full()
-        except Exception:
+        except ValueError:
             print("Enter Number Only!")
     if not(check_winner()):
         print("="*50)
@@ -130,7 +130,7 @@ def with_pc(game_end=global_game_end, board=global_board):
             if not(check_winner()):
                 display_board() #display board after every input
                 game_end = board_full() #check if board full already
-        except Exception:
+        except ValueError:
             print("Enter Number Only!")
     if not(check_winner()):
         print("="*50)
