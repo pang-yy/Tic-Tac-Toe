@@ -197,6 +197,7 @@ def pc_move(available_move, num_of_player_move, board=global_board):
             random_move = 8
             moved = True
     #fouth stage : to do better move
+    # TODO: Redundant Code
     if not(moved):
         if 4 in available_move:
             random_move = 4
